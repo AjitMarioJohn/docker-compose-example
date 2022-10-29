@@ -1,7 +1,0 @@
-server:
-  port: 9090
-amazon-properties:
-  endpointUrl: https://s3.us-east-1.amazonaws.com
-  accessKey: AKIA2JF66WJN6ATQK3HG
-  secretKey: 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
-  bucketName: ajit-springbootaws

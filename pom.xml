@@ -8,7 +8,6 @@
 		<module>CommonModule</module>
 		<module>ServiceTwo</module>
 		<module>ServiceThree</module>
-        <module>SpringBootAwsS3</module>
     </modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
