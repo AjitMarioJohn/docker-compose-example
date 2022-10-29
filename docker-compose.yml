@@ -1,0 +1,27 @@
+version: '3.1'
+services:
+  serviceThree:
+    build: ./ServiceThree
+    container_name: service_three
+    image: ajitmariojohn/servicethree:1.0.0
+    ports:
+      - "8282:8080"
+  serviceTwo:
+    build: ./ServiceTwo
+    container_name: service_two
+    image: ajitmariojohn/servicetwo:1.0.0
+    ports:
+      - "8181:8080"
+  serviceOne:
+    build: ./ServiceOne
+    container_name: service_one
+    image: ajitmariojohn/serviceone:1.0.0
+    ports:
+      - "8080:8080"
+    depends_on:
+      - serviceTwo
+      - serviceThree
+    environment:
+      - SERVICES_SERVICE_TWO_URL=serviceTwo:8080/api/service/two
+      - SERVICES_SERVICE_THREE_URL=serviceThree:8080/api/service/three
+
